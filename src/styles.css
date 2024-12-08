@@ -1,0 +1,114 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    font-family: 'Georgia', serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: #2a4f3b;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer {
+    background-color: #2a4f3b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#background {
+    background-image: url(images/guillermo-martinez-dark-forest.jpg);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#content {
+    margin: 0px 20rem;
+    padding: 2rem 5rem;
+    background-color: rgba(126, 126, 126, 0.3);
+    backdrop-filter: blur(10px);
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+section {
+    margin: 2rem 0.5rem;
+}
