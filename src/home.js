@@ -1,5 +1,6 @@
 import restaurantImage from './images/louisa-wilhelm-swamp-tavern.jpg';
 import loadMenu from './menu';
+import loadEvents from './events';
 
 function createHome() {
     const home = document.createElement('div');
@@ -69,6 +70,7 @@ function createHome() {
     );
 
     const eventButton = document.createElement('button');
+    eventButton.addEventListener('click', loadEvents);
     eventButton.textContent = 'Discover Upcoming Events';
     eventSection.appendChild(eventButton);
 
