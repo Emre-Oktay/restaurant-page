@@ -1,3 +1,3 @@
-import './styles.css';
+import init from './init';
 
-console.log('Hello');
+init();

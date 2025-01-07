@@ -67,8 +67,15 @@ h6 {
     isolation: isolate;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -79,7 +86,7 @@ header {
     font-size: 1.5rem;
 }
 
-.footer {
+footer {
     background-color: #2a4f3b;
     color: white;
     padding: 20px;
@@ -91,9 +98,13 @@ header {
     margin-bottom: 20px;
 }
 
+section {
+    margin: 2rem 0.5rem;
+}
+
 #background {
     background-image: url(images/guillermo-martinez-dark-forest.jpg);
-    height: 100%;
+    flex-grow: 1;
     width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -102,13 +113,10 @@ header {
 #content {
     margin: 0px 20rem;
     padding: 2rem 5rem;
+    height: 100%;
     background-color: rgba(126, 126, 126, 0.3);
     backdrop-filter: blur(10px);
     border-width: 0 1px 0 1px;
     border-style: solid;
     border-color: black;
-}
-
-section {
-    margin: 2rem 0.5rem;
 }
