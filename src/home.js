@@ -1,7 +1,8 @@
 import restaurantImage from './images/louisa-wilhelm-swamp-tavern.jpg';
+import loadMenu from './menu';
 
 function createHome() {
-    const home = document.createElement('home');
+    const home = document.createElement('div');
 
     const heroSection = document.createElement('section');
     heroSection.classList.add('hero');
@@ -49,7 +50,8 @@ function createHome() {
     menuSection.appendChild(createMenuItem('Frog Prince Ale', 'A frothy, golden beer brewed locally.'));
 
     const menuButton = document.createElement('button');
-    menuButton.textContent = 'Discover Upcoming Events';
+    menuButton.addEventListener('click', loadMenu);
+    menuButton.textContent = 'View Full Menu';
     menuSection.appendChild(menuButton);
 
     home.appendChild(menuSection);
