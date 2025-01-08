@@ -56,7 +56,16 @@ function createHome() {
     const menuButtonDiv = document.createElement('div');
     menuButtonDiv.classList.add('button-div');
     const menuButton = document.createElement('button');
-    menuButton.addEventListener('click', loadMenu);
+    menuButton.addEventListener('click', () => {
+        const buttons = document.querySelectorAll('nav button');
+        buttons.forEach((button) => {
+            button.classList.remove('active');
+        });
+
+        const activeButton = document.getElementById('menuBtn');
+        activeButton.classList.add('active');
+        loadMenu();
+    });
     menuButton.textContent = 'View Full Menu';
     menuButtonDiv.appendChild(menuButton);
     menuSection.appendChild(menuButtonDiv);
@@ -78,7 +87,16 @@ function createHome() {
     const eventButtonDiv = document.createElement('div');
     eventButtonDiv.classList.add('button-div');
     const eventButton = document.createElement('button');
-    eventButton.addEventListener('click', loadEvents);
+    eventButton.addEventListener('click', () => {
+        const buttons = document.querySelectorAll('nav button');
+        buttons.forEach((button) => {
+            button.classList.remove('active');
+        });
+
+        const activeButton = document.getElementById('eventsBtn');
+        activeButton.classList.add('active');
+        loadEvents();
+    });
     eventButton.textContent = 'Discover Upcoming Events';
     eventButtonDiv.appendChild(eventButton);
     eventSection.appendChild(eventButtonDiv);
