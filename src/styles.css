@@ -74,6 +74,7 @@ body {
 
 body {
     font-family: 'Georgia', serif;
+    font-size: 1.25rem;
     display: flex;
     flex-direction: column;
 }
@@ -82,15 +83,16 @@ header {
     padding: 20px;
     text-align: center;
     background: #2a4f3b;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
 footer {
     background-color: #2a4f3b;
-    color: white;
-    padding: 20px;
+    color: black;
+    padding: 10px;
     text-align: center;
+    font-size: 1rem;
 }
 
 .logo {
@@ -100,6 +102,30 @@ footer {
 
 section {
     margin: 2rem 0.5rem;
+}
+
+.logo {
+    font-family: monospace, serif;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+nav button {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #5aaa7f;
+}
+
+nav button.active {
+    background-color: #122219;
+    color: #ffffff;
 }
 
 #background {
@@ -113,7 +139,7 @@ section {
 #content {
     margin: 0px 20rem;
     padding: 2rem 5rem;
-    height: 100%;
+    min-height: 100%;
     background-color: rgba(126, 126, 126, 0.3);
     backdrop-filter: blur(10px);
     border-width: 0 1px 0 1px;
@@ -130,4 +156,42 @@ section {
     padding: 20px;
     background-color: rgba(126, 126, 126, 0.3);
     border-radius: 8px;
+}
+
+.about img {
+    margin: 15px 0px;
+}
+
+.menu-items {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: rgba(126, 126, 126, 0.3);
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.button-div {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.button-div button {
+    background-color: rgba(126, 126, 126, 0.3);
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.button-div button:hover {
+    background-color: rgba(56, 71, 57, 0.45);
+    color: white;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
 }

@@ -43,17 +43,23 @@ function createHome() {
     menuHeading.textContent = 'Taste the Magic of the Forest';
     menuSection.appendChild(menuHeading);
 
-    menuSection.appendChild(createMenuItem('Lily Pad Crisps', 'Thin, fried kale chips with a pond herb dip.'));
-    menuSection.appendChild(
-        createMenuItem('Tadpole Stew', 'A hearty vegetable and fish stew inspired by forest flavors.')
-    );
-    menuSection.appendChild(createMenuItem('Moonlit Mousse', 'A silken chocolate mousse with a hint of lavender.'));
-    menuSection.appendChild(createMenuItem('Frog Prince Ale', 'A frothy, golden beer brewed locally.'));
+    const menuDiv = document.createElement('div');
+    menuDiv.classList.add('menu-items');
 
+    menuDiv.appendChild(createMenuItem('Lily Pad Crisps', 'Thin, fried kale chips with a pond herb dip.'));
+    menuDiv.appendChild(createMenuItem('Tadpole Stew', 'A hearty vegetable and fish stew inspired by forest flavors.'));
+    menuDiv.appendChild(createMenuItem('Moonlit Mousse', 'A silken chocolate mousse with a hint of lavender.'));
+    menuDiv.appendChild(createMenuItem('Frog Prince Ale', 'A frothy, golden beer brewed locally.'));
+
+    menuSection.appendChild(menuDiv);
+
+    const menuButtonDiv = document.createElement('div');
+    menuButtonDiv.classList.add('button-div');
     const menuButton = document.createElement('button');
     menuButton.addEventListener('click', loadMenu);
     menuButton.textContent = 'View Full Menu';
-    menuSection.appendChild(menuButton);
+    menuButtonDiv.appendChild(menuButton);
+    menuSection.appendChild(menuButtonDiv);
 
     home.appendChild(menuSection);
 
@@ -69,10 +75,13 @@ function createHome() {
         )
     );
 
+    const eventButtonDiv = document.createElement('div');
+    eventButtonDiv.classList.add('button-div');
     const eventButton = document.createElement('button');
     eventButton.addEventListener('click', loadEvents);
     eventButton.textContent = 'Discover Upcoming Events';
-    eventSection.appendChild(eventButton);
+    eventButtonDiv.appendChild(eventButton);
+    eventSection.appendChild(eventButtonDiv);
 
     home.appendChild(eventSection);
 
@@ -93,6 +102,7 @@ function createMenuItem(name, description) {
     details.textContent = description;
 
     const div = document.createElement('div');
+    div.classList.add('menu-item');
     div.appendChild(heading);
     div.appendChild(details);
 
